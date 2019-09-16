@@ -1,3 +1,4 @@
+# The objective of this class is to represent the API results.
 class ZypeVideo
 
   attr_accessor :id, :title, :thumbnail, :description

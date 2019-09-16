@@ -22,13 +22,8 @@ $ bundle install
 3. Move to folder config/ and create a *application.yml* file following the example in application_example.yml.
 Inside the file *application.yml* you have to specify your database or API configuration.
 
-4. Move to the main folder and run the migrations
 
-```
-$ rake db:setup
-```
-
-5. Finally, run the App executing:
+4. Finally, run the App executing:
 ```
 $ rails server
 ```
@@ -43,5 +38,16 @@ $ rspec
 
 ## Implementation details
 
+
+1. Models: These are the business models.
+
+- ZypeVideo: This is the main class of this App. This class represent each video to display inside the App. In terms of time and simplicity this class is self-contained and it's composed for different class methods to map the results from the API. In another approach this class could be divided in two classes: Model class and a Mapper class.
+
+2. Services: Models related with API communication
+
+- Api::Zype: This class establish a direct connection with the Zype API. It has two methods: index and show. Each method corresponds with one endpoint from the API. In the case of a bad connection with the API it will raise a Standard Error from the exceptions/ folder. The name of this class is Zype in case we need more connections in the future with other APIs.
+
+3. Controllers:
+- ZypeVideosController: It has two methods: index and show. The index method is the root of this App and it will render all the videos from the Zype API. The show method displays one video from the index view with more details from the video like the description.
 
 

@@ -25,8 +25,10 @@ module Api
 
     def connection(url)
       response = @client.get(url)
-      status = response['status'].to_s
-      # return fail ::Zype::StandardError, 'Request Error' unless status == '200'
+      status = response.status
+
+      return fail Api::StandardError, 'Request Error' unless status == 200
+
       response.body['response']
     end
 
