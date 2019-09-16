@@ -1,0 +1,17 @@
+<div class="video__details">
+  
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div id="<%= "zype_#{@video.id}"%>"></div>
+
+      <script src="<%= "https://player.zype.com/embed/#{@video.id}.js?autoplay=true&app_key=#{ENV['ZYPE_API_KEY']}"%>" type="text/javascript"></script>       
+    </div>
+    <div class="col-12 col-md-6">
+      <h2 class="video__details-title"><%= @video.title %></h2>
+      <p class="video__details-description"><%= @video.description %></p>  
+    </div>
+
+    </div>
+  </div>  
+ 
+</div>

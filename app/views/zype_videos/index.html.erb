@@ -1,0 +1,14 @@
+<div class="main">
+  <h1 class= "main__title"> Zype Code Challenge 💻</h1>
+
+  <div class="row">
+    <% @videos.each do |video| %>
+      <div class="col-12 col-md-4 video">
+        <%= link_to zype_video_path(video.id) do %>
+          <%= image_tag video.thumbnail, height: '200', width: '400', class: 'video__image' %>
+          <span class="video__title"><%= video.title %></span> 
+        <% end %>
+      </div>
+    <% end %>
+  </div>  
+</div>

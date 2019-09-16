@@ -1,0 +1,31 @@
+.video {
+  text-align: center;
+  &:hover {
+    background-color: #e6e4df;
+  }  
+}
+      
+    .video__title {
+      text-align: center;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .video__image {
+      margin: 10px;
+      padding: 10px;
+    }
+
+  .video__details {}
+
+    .video__details-player {
+      margin: 20px;
+    }
+
+    .video__details-title {
+      margin-bottom: 10px;
+    }
+
+    .video__details-description {
+      font-size: 11px;
+    }
