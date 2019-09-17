@@ -41,18 +41,25 @@ group :development do
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0'
   gem 'sqlite3', '~> 1.4'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'database_cleaner'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
   gem 'faker'
-  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-core', git: 'https://github.com/rspec/rspec-core'
+  gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations'
+  gem 'rspec-mocks', git: 'https://github.com/rspec/rspec-mocks'
+  gem 'rspec-rails', git: 'https://github.com/rspec/rspec-rails', branch: '4-0-dev'
+  gem 'rspec-support', git: 'https://github.com/rspec/rspec-support'
   gem 'selenium-webdriver'
+  gem 'vcr'
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,4 @@
+# Configuration variables
+
+ZYPE_API: https://yoururl
+ZYPE_API_KEY: YourApiKey
